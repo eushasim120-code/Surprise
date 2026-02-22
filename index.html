@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Anwoyee 🎂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FIRST SCREEN -->
+<div id="startScreen" class="center-screen">
+    <h1 class="surprise-title">🎁 A Special Birthday Surprise 🎁</h1>
+    <button class="start-btn" onclick="showBirthday()">Click To Open 🎉</button>
+</div>
+
+<!-- BIRTHDAY SECTION -->
+<div id="birthdaySection" class="hidden">
+
+    <div class="container">
+        <h1 class="title">✨ Happy Birthday Anwoyee ✨</h1>
+
+        <p id="instruction" class="message">Touch the candle 🕯️</p>
+
+        <div id="candle" class="candle" onclick="lightCandle()">🕯️</div>
+
+        <div id="cakeSection" class="hidden">
+            <p id="typedMessage" class="typing"></p>
+
+            <div class="cake-container">
+                <div id="cake" class="cake" onclick="cutCake()">🎂</div>
+                <div id="knife" class="knife hidden">🔪</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="romantic-music.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

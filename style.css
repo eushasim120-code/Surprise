@@ -1,0 +1,138 @@
+/* Import sweet handwritten fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat&family=Comic+Neue:wght@400;700&display=swap');
+
+body, h1, p, .message, .typing, .surprise-title {
+    font-family: 'Pacifico', 'Caveat', 'Comic Neue', cursive;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    background: linear-gradient(-45deg, #ff9a9e, #fbc2eb, #a18cd1, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.hidden { display: none; }
+
+/* First Screen */
+.center-screen {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.surprise-title {
+    font-size: 2.5em;
+    font-family: 'Pacifico', cursive;
+}
+
+.start-btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: #ff4da6;
+    color: white;
+    transition: 0.3s;
+    font-family: 'Caveat', cursive;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Birthday Content */
+.container {
+    position: relative;
+    top: 10%;
+}
+
+.title { font-size: 3em; font-family: 'Pacifico', cursive; }
+.message { font-size: 1.5em; font-family: 'Caveat', cursive; }
+.typing { font-size: 1.3em; min-height: 60px; font-family: 'Caveat', cursive; }
+
+/* Candle */
+.candle {
+    font-size: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.candle:hover { transform: scale(1.2); }
+
+/* Cake */
+.cake {
+    font-size: 110px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cake:hover { transform: scale(1.1); }
+
+.cake-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Knife */
+.knife {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    font-size: 60px;
+    transform: translateX(-50%);
+    animation: cut 1.5s forwards;
+}
+
+@keyframes cut {
+    0% {transform: translate(-50%, -40px);}
+    50% {transform: translate(-50%, 40px);}
+    100% {transform: translate(-50%, -10px);}
+}
+
+/* 🎈 Balloons */
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    border-radius: 50% 50% 45% 45%;
+    bottom: -120px;
+    animation: floatUp linear forwards;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: white;
+    left: 50%;
+    top: 80px;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* 🎉 Birthday Emojis */
+.emoji {
+    position: absolute;
+    font-size: 25px;
+    animation: floatEmoji 6s linear forwards;
+}
+
+@keyframes floatEmoji {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
